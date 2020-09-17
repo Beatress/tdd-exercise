@@ -27,11 +27,7 @@ def blackjack_score(hand)
 
   # Add aces to score
   while aces > 0
-    if score + 11 > 21
-      score += 1
-    else
-      score += 11
-    end
+    score + 11 > 21 ? score += 1 : score += 11
     aces -= 1
   end
 
